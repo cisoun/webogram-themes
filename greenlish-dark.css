@@ -78,6 +78,16 @@
 		color: #ffffff !important;
 	}
 
+	.im_dialog_wrap img {
+		filter: grayscale(100%);
+
+	}
+
+	.im_dialog_wrap.active img,
+	.im_dialog_wrap:hover img {
+		filter: none;
+	}
+
 	.im_dialogs_col_wrap { /*contactlist right border*/
 		border-right: 2px solid #222;
 	}
@@ -106,6 +116,14 @@
 		color: #4d4d4d;
 	}
 
+	.im_history_message_wrap:not(.im_grouped_short) {
+		border-top: 1px dashed #2a2a2a;
+	}
+
+	.im_history_message_wrap:nth-child(2n+1) {
+		background-color: #222;
+	}
+
 	.im_message_author {
 		color: #79BD8F !important;
 	}
@@ -130,8 +148,10 @@
 	a:hover {
 		background-color: #282828 !important;
 	}
-	.im_message_unread_split {
-		background: #4d4d4d;
+
+	.im_message_unread_split{
+		border-bottom: 1px dashed #2a2a2a;
+		padding: 20px;
 	}
 
 	@keyframes im_message_focus_fade{
