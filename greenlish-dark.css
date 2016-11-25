@@ -144,6 +144,11 @@
 	.im_message_selected .im_message_outer_wrap {
 		background: #4d4d4d;
 	}
+	
+	.im_message_unread_split {
+		background: #111;
+		color: #fff;
+	}
 
 	a:hover {
 		background-color: #282828 !important;
@@ -175,6 +180,15 @@
 	.composer_rich_textarea:focus {
 		box-shadow: 0px 3px 1px #ffffff !important;
 	}
+	.im_send_form {
+		padding-right: 40px;
+	}
+	
+	div.composer_emoji_tooltip.noselect.composer_emoji_tooltip_shown {
+		left: auto;
+		padding-right: 50px;
+		right: 20px !important;
+	}
 
 	.tg_head_logo_dropdown .dropdown-menu > li > a {
 		color: #ffffff;
@@ -182,6 +196,11 @@
 
 	.btn-primary.disabled, .btn-primary[disabled] {
 		background: #4d4d4d none repeat scroll 0% 0%;
+	}
+	
+	button.btn.reply_markup_button {
+		background-color: #4d4d4d;
+		color: #ffffff;
 	}
 
 	/*emoji*/
