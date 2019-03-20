@@ -51,7 +51,7 @@
     --primary: var(--purple);
     --primary-light: var(--purple-light);
     --primary-dark: var(--purple-dark);
-    --secondary: var(--red-light);
+    --secondary: var(--red);
 
     --gradient: linear-gradient(45deg, var(--primary), var(--secondary));
     --gradient-red: linear-gradient(45deg, var(--red), var(--orange));
@@ -79,7 +79,7 @@ body {
     height: 100% !important;
 }
 
-.icon, .md_modal_split_action_camera { filter: hue-rotate(60deg); } /* -40 (turquoise), 0 (blue), 60 (purple), 140 (red) */
+.icon, .md_modal_split_action_camera { filter: hue-rotate(60deg); } /* -80 (green), -40 (turquoise), 0 (blue), 60 (purple), 140 (red) */
 .icon-reply-bar, .icon-bar { background: var(--foreground) !important; }
 
 .user_color_1 { color: var(--red) !important; }
@@ -153,23 +153,26 @@ input[type="search"]:focus {
  */
 
 /* Bottom border */
-.tg_page_head { border-bottom: 1px solid var(--separator); }
+/*.tg_page_head { border-bottom: 1px solid var(--separator); }*/
 
 /* Force 100% width) */
-.tg_head_split { background: var(--background); min-width: 100%; }
+.tg_head_split { background: var(--background-light); min-width: 100%; height: 4em !important; }
 
 /* Buttons */
 .tg_head_btn {
     background: var(--background);
-    border-top: 3px solid var(--background);
-    transition: border-bottom var(--transition);
+    border-top: 0.3em solid var(--background);
+    transition: background var(--transition), border-top var(--transition);
+    max-height: 3.7em;
 }
 .tg_head_btn:hover,
 .tg_head_logo_wrap .dropdown .open .tg_head_btn,
 .dropdown.open .tg_head_btn {
-    background: var(--primary-dark);
-    border-top: 3px solid var(--primary);
+    background: var(--primary-dark) !important;
+    border-top: 0.3em solid var(--primary);
 }
+
+.tg_head_main_peer_wrap .tg_head_btn { background: var(--background-light); }
 
 /* "Show recent messages" */
 .tg_head_peer_return_btn { color: var(--foreground); }
@@ -348,6 +351,10 @@ input[type="search"]:focus {
 /* Message (code) */
 .im_message_text pre, .im_message_text > code { background: none; border: 0; color: var(--primary); }
 
+/* Editor container */
+.im_send_panel_wrap { max-width: 80%; }
+.im_send_form { max-width: unset; }
+
 /* Editor */
 .composer_rich_textarea {
     border: 1px solid transparent;
@@ -364,6 +371,7 @@ input[type="search"]:focus {
     box-shadow: unset;
 }
 
+/* Submit button */
 .im_submit_send { background: none !important; }
 .im_submit_send span { color: var(--foreground); }
 
